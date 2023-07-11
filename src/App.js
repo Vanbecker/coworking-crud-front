@@ -1,5 +1,6 @@
 import './App.css';
-import CreateCoworking from './CreateCoworking';
+import CreateCoworking from './CreateCoworkings';
+import ListCoworkings from './ListCoworkings';
 // import React, { useState } from 'react';
 
 
@@ -11,6 +12,7 @@ function App() {
       </header>
       <main>
         <CreateCoworking />
+        <ListCoworkings />
       </main>
     </div>
   );
