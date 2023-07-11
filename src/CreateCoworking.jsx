@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 
 const CreateCoworking = () => {
     const [formData, setFormData] = useState({
-        title: 'A',
-        description: 'A',
-        address: 'A'
+        title: '…',
+        description: '…',
+        address: '…'
     });
 
 
