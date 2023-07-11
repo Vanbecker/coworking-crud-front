@@ -1,4 +1,3 @@
-// export default CreateCoworking;
 
 import React, { useState } from 'react';
 
@@ -9,7 +8,7 @@ const CreateCoworking = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Récupérer les données du formulaire
+
         console.log('Titre:', title);
         console.log('Description:', description);
         console.log('Adresse:', address);
@@ -20,7 +19,7 @@ const CreateCoworking = () => {
             <h2>Créer un nouveau coworking</h2>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="title">Titre :</label>
+                    <label htmlFor="title">Titre  </label>
                     <input
                         type="text"
                         id="title"
@@ -29,7 +28,7 @@ const CreateCoworking = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="description">Description :</label>
+                    <label htmlFor="description">Description  </label>
                     <textarea
                         id="description"
                         value={description}
@@ -37,7 +36,7 @@ const CreateCoworking = () => {
                     />
                 </div>
                 <div>
-                    <label htmlFor="address">Adresse :</label>
+                    <label htmlFor="address">Adresse  </label>
                     <input
                         type="text"
                         id="address"
