@@ -42,7 +42,7 @@ const CreateCoworking = () => {
                 <h3>Resultat Formulaire</h3>
                 <p>Titre: {formData.title}</p>
                 <p>Description: {formData.description}</p>
-                <p>Address: {formData.address}</p>
+                <p>Adresse: {formData.address}</p>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 import './App.css';
 import CreateCoworking from './CreateCoworkings';
 import ListCoworkings from './ListCoworkings';
-// import React, { useState } from 'react';
+import ContactForm from './ContactForm';
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <main>
         <CreateCoworking />
         <ListCoworkings />
+        <ContactForm />
       </main>
     </div>
   );
