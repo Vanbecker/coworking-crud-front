@@ -77,17 +77,29 @@
 
 // export default ListCoworkings;
 
+
+/////////////////////////////
+
+
+
+/////////
+
 import { useState, useEffect } from "react";
 import ShowCoworking from "./ShowCoworking";
 
 const ListCoworkings = () => {
     const [coworkings, setCoworkings] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const fetchCoworkings = async () => {
         if (coworkings.length === 0) {
-            const coworkingsResponse = await fetch("/coworkings.json");
-            const coworkingsData = await coworkingsResponse.json();
-            setCoworkings(coworkingsData);
+
+            setTimeout(async () => {
+                const coworkingsResponse = await fetch("/coworkings.json");
+                const coworkingsData = await coworkingsResponse.json();
+                setCoworkings(coworkingsData);
+                setLoading(false);
+            }, 1500);
         }
     };
 
@@ -120,9 +132,20 @@ const ListCoworkings = () => {
 
             <button onClick={() => handleClick(null)}>Tous</button>
 
-            {coworkingsFiltered.map((coworking) => {
-                return <ShowCoworking key={coworking.id} coworking={coworking} />;
-            })}
+            {loading ? (
+                //
+                <p>Chargement en cours...</p>
+                // <svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                //     <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+                // </svg>
+                //
+            ) : coworkingsFiltered.length > 0 ? (
+                coworkingsFiltered.map((coworking) => (
+                    <ShowCoworking key={coworking.id} coworking={coworking} />
+                ))
+            ) : (
+                <p>Aucun espace de coworking trouvé.</p>
+            )}
         </section>
     );
 };

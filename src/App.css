@@ -1,4 +1,4 @@
-
+/* 
 .App {
   text-align: center;
 }
@@ -47,17 +47,134 @@ button {
 
 button:hover {
   background-color: #0056b3;
-}
-
-
-/* article {
-  display: flex;
- align-items: flex-start;
-}
-.butsup {
-  display: flex;
- 
 } */
 
+/* Ajoutez ce code CSS dans votre fichier App.css */
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+.main {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 250px;
+  height: 350px;
+  
+}
+
+.butsup{
+  padding: 10px 20px;
+}
+
+/* SPINNER */
+
+
+
+/* html, body { height: 100%; }
+
+body {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+$offset: 187;
+$duration: 1.4s;
+
+.spinner {
+  animation: rotator $duration linear infinite;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.path {
+  stroke-dasharray: $offset;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation:
+    dash $duration ease-in-out infinite, 
+    colors ($duration*4) ease-in-out infinite;
+}
+
+@keyframes colors {
+	0% { stroke: #4285F4; }
+	25% { stroke: #DE3E35; }
+	50% { stroke: #F7C223; }
+	75% { stroke: #1B9A59; }
+  100% { stroke: #4285F4; }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: $offset; }
+ 50% {
+   stroke-dashoffset: $offset/4;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: $offset;
+   transform:rotate(450deg);
+ }
+}
+
+h2 {
+  position: absolute;
+} */
 
  
